@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>JSEJ7</title>
+    </head>
+    <body>
+        Procesador:
+        <select id="cpu">
+            <option value="400">Intel I3 - $400</option>
+            <option value="600">Intel I5 - $600</option>
+            <option value="800">Intel I7 - $800</option>
+        </select><br>
+        Monitor:
+        <select id="monitor">
+            <option value="250">Samsung 20 - $250</option>
+            <option value="350">Samsung 22 - $350</option>
+            <option value="550">Samsung 26 - $550</option>
+        </select><br>
+        Disco Duro:
+        <select id="disco">
+            <option value="300"> 500Gb - $300 </option>
+            <option value="440"> 1Tb - $440</option>
+            <option value="500"> 3Tb - $500</option>
+        </select><br>
+        <input type="button" value="calcular" onclick="calcular()">
+        Presupuesto total: <input type="text" id="total" readonly>
+
+        <script>
+          function calcular() {
+           var cpu = Number(document.getElementById('cpu').value);
+           var monitor = Number(document.getElementById('monitor').value);
+           var disco = Number(document.getElementById('disco').value);
+           var total = cpu+monitor+disco;
+           document.getElementById('total').value = "$" + total;
+          }
+        </script>
+
+    </body>
+</html>

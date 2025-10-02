@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>JSEJ9</title>
+  </head>
+  <body>
+   <h2>Ejercicio 9: Validación de Clave</h2>
+    <form>
+        <p>Ingrese su nombre:
+            <input type="text" id="nombre">
+        </p>
+        <p>Ingrese su clave:
+            <input type="password" id="clave">
+        </p>
+        <p>
+            <input type="button" value="Enviar" onClick="validarClave()">
+        </p>
+    </form>
+    <script>
+        function validarClave() {
+    let clave = document.getElementById("clave").value;
+    let nombre = document.getElementById("nombre").value;
+
+    if (nombre === "" || clave === "") {
+        alert("Por favor, complete todos los campos.");
+        return;
+    }
+
+    if (clave.length < 7) {
+        alert("La clave no puede tener menos de 7 caracteres.");
+    } else if (clave.length > 20) {
+        alert("La clave no puede tener más de 20 caracteres.");
+    } else {
+        alert("Registro exitoso. ¡Bienvenido/a " + nombre + "!");
+    }
+}
+    </script>
+  </body>
+</html>

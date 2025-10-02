@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>JSEJ8</title>
+    </head>
+    <body>
+        <h1>Multiple Choice</h1>
+        1. 2+2 = 
+        <select id="q1">
+        <option value="0">--</option>
+        <option value="0">3</option>
+        <option value="1">4</option>
+        <option value="0">5</option>
+        </select><br>
+        
+        2. Color del cielo (día) 
+        <select id="q2">
+        <option value="0">--</option>
+        <option value="1">Azul</option>
+        <option value="0">Verde</option>
+        <option value="0">Rojo</option>
+        </select><br>
+        
+        3. Día siguiente de lunes 
+        <select id="q3">
+        <option value="0">--</option>
+        <option value="1">Martes</option>
+        <option value="0">Domingo</option>
+        <option value="0">Sábado</option>
+        </select><br>
+        
+        4. Agua en estado normal es 
+        <select id="q4">
+        <option value="0">--</option>
+        <option value="1">Líquida</option>
+        <option value="0">Sólida</option>
+        <option value="0">Gaseosa</option>
+        </select><br>
+        
+        <input type="button" value="Corregir" onclick="corregir()">
+        </form>
+
+        <script>
+        function corregir() {
+            let correctas = 0;
+            for (let i = 1; i <= 4; i++) {
+                correctas += Number(document.getElementById('q'+i).value);
+            }
+            const incorrectas = 4 - correctas;
+            alert("Correctas: " + correctas + "\nIncorrectas: " + incorrectas);
+            }
+        </script>
+    </body>
+</html>
+
+            

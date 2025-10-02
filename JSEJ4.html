@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>JSEJ4</title>
+    </head>
+    <body>
+       Nombre: <input type="text" id="nombre">
+       Apellido: <input type="text" id="apellido"><br>
+       
+       <input type="button" value="concatenar" onclick="concat()">
+       <script>
+        function concat() {
+            var n = document.getElementById("nombre").value;
+            var a = document.getElementById("apellido").value;
+            document.getElementById("na").value = n + " " + a;
+        }
+        </script>
+        <br>
+        Resultado: <input type="text" id="na"><br>
+    </body>
+</html>
